@@ -9,5 +9,6 @@ def feedback (query, expectedResult):
 def main():
     for trainingData in readTrainingData():
    	result = iplSolver(trainingData[0], w)
+	print result
 	f = feedback(result, trainingData[1])
 main()

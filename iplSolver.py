@@ -11,7 +11,7 @@ def features1 (sentence, word1, word2):
     return 0, similarity(word1, word2), 0
 
 def feature2 (sentence, word1, function1, word2, function2):
-    similarity = 0
+    similarity = 2
     if (function1[0]  == "largest" and function2[0] == "state"):
     	similarity = 7;
     if (function1[0] == "state" and function2[0] == "next_to"): 
@@ -41,7 +41,7 @@ def insertToResult(finalComposition, wordIndex, functionIndex, wordIndex1, funct
 def compositeFunctions(finalComposition):
     firstComposition = finalComposition[0] if finalComposition else None
     detected = 0
-    for currentComposition in finalComposition:
+    for currentComposition in finalComposition[1:]:
 	if firstComposition[-1] == currentComposition[0]:
 	    firstComposition.pop()
 	    firstComposition.extend(currentComposition)
