@@ -10,3 +10,5 @@ def directLearning(trainingDatas):
     clf.fit(X, Y)
     return clf.coef_
 
+#TODO   
+def aggressiveLearning():
