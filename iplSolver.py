@@ -131,5 +131,7 @@ def iplSolver (sentence, w):
     compositeFunctions(finalComposition)
     for function in finalComposition[0]:
     	result = result.replace(FUNC_ARG, functions[function[1]][0] + "(" + FUNC_ARG + ")")
+	if functions[function[1]][0] == "const":
+    	    result = result.replace(FUNC_ARG, words[function[0]].lower())
     return result
 
